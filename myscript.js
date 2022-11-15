@@ -28,6 +28,8 @@ document.getElementById('calculate').onclick = function caluclator(){
             document.getElementById('wynik').innerHTML = 'Twoj wynik to '+ result;
         }
     }
+
+   
 }
 
 // Palindrom
@@ -76,29 +78,31 @@ function bubbleSort(arr){
 
 
 
-function secondBiggest(arr2){
+function secondBiggest(arr4){
     
-    arr2=bubbleSort(arr2);
-    console.log(arr2);
-    return arr2[arr2.length - 2];
+    arr4=bubbleSort(arr4);
+    console.log(arr4);
+    return arr4[arr4.length - 2];
    
 }
 
-// function secondBiggestString(arr3){
-//     let xd = [];
-//     for(let i = 0; i < arr3.length; i++){
-//         xd.push(arr3[i].length);
-//     }
-//     console.log(xd);
-//     xd=bubbleSort(xd)
-//     console.log(xd);
+function secondBiggestString(arr){
     
-// }
+    var lgth = 0;
+    var longest;
 
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i].length > lgth) {
+    var lgth = arr[i].length;
+    longest = arr[i - 1];
+  }
+}
+console.log(longest);
+}
 
 
 console.log(secondBiggest(arr2));
-// console.log(secondBiggestString(arr3));
+console.log(secondBiggestString(arr3));
 
 
 // Zadanie 4
